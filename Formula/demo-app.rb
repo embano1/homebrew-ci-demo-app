@@ -5,28 +5,28 @@
 class DemoApp < Formula
   desc "Go CI Demo App showcasing goreleaser, Github Actions and ko."
   homepage "https://github.com/embano1/ci-demo-app/blob/master/README.md"
-  version "0.2.8"
+  version "0.2.9"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/embano1/ci-demo-app/releases/download/v0.2.8/demo-app_Darwin_x86_64.tar.gz"
-    sha256 "d10f30c786b027dfec94e0518e75bace941d22060677387f1151ad08a515ccf9"
+    url "https://github.com/embano1/ci-demo-app/releases/download/v0.2.9/demo-app_Darwin_x86_64.tar.gz"
+    sha256 "354addaa6e4e3c2e59caac61480bab2275e02ffbe9652b7eb2b89b7ec5f8de6d"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/embano1/ci-demo-app/releases/download/v0.2.8/demo-app_Darwin_arm64.tar.gz"
-    sha256 "2462b7552cd55f0308d09c51e21bb5caed3489c589086a2cb1e4855746be48cf"
+    url "https://github.com/embano1/ci-demo-app/releases/download/v0.2.9/demo-app_Darwin_arm64.tar.gz"
+    sha256 "4cdfe66c9d64b98ed6564e6c015d1cade5deb1558bf242b8ad786ef37368e650"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/embano1/ci-demo-app/releases/download/v0.2.8/demo-app_Linux_x86_64.tar.gz"
-    sha256 "67695dd5e86e1f6dc0ed2838529aaacb663884298cb808d1bb305064f846f2cb"
+    url "https://github.com/embano1/ci-demo-app/releases/download/v0.2.9/demo-app_Linux_x86_64.tar.gz"
+    sha256 "b7606c5cc1f2cde97cf22843ee353722f1c37b9f31f1a616389b2ec74bfa6776"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/embano1/ci-demo-app/releases/download/v0.2.8/demo-app_Linux_armv6.tar.gz"
-    sha256 "93c6603c84932ce8af2b93b045aa450dc58c7a21c392fe7f21df9efb23fa2c49"
+    url "https://github.com/embano1/ci-demo-app/releases/download/v0.2.9/demo-app_Linux_armv6.tar.gz"
+    sha256 "85a4cda509e7248aba159c9347d198fffa3a6b201f5b79758bd61d1d5335dcb9"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/embano1/ci-demo-app/releases/download/v0.2.8/demo-app_Linux_arm64.tar.gz"
-    sha256 "c1315cb4d5b06ab59629c538be1065230411a544a5e219878d9d862e2b3c3a65"
+    url "https://github.com/embano1/ci-demo-app/releases/download/v0.2.9/demo-app_Linux_arm64.tar.gz"
+    sha256 "621aa595a8b0f469a39c03ffcd938fb84555992e9df38745841df6a9acb96993"
   end
 
   def install
