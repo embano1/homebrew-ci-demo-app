@@ -5,20 +5,20 @@
 class DemoApp < Formula
   desc "Go CI Demo App showcasing goreleaser, Github Actions and ko."
   homepage "https://github.com/embano1/ci-demo-app/blob/master/README.md"
-  version "0.3.4"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/embano1/ci-demo-app/releases/download/v0.3.4/demo-app_Darwin_arm64.tar.gz"
-      sha256 "a27704074a8205901db885f07caad6e5cecac74d358481f43f4526c720299398"
+      url "https://github.com/embano1/ci-demo-app/releases/download/v0.4.0/demo-app_Darwin_arm64.tar.gz"
+      sha256 "5413e7e861a9808485fe51cda001dc5be384202917f838c3de6f163f400bcf38"
 
       def install
         bin.install "demo-app"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/embano1/ci-demo-app/releases/download/v0.3.4/demo-app_Darwin_x86_64.tar.gz"
-      sha256 "eaf159505a2d7d89261589a0bdf5982509d4a18b212beeb59303d3730d6ed7dd"
+      url "https://github.com/embano1/ci-demo-app/releases/download/v0.4.0/demo-app_Darwin_x86_64.tar.gz"
+      sha256 "223405128c47ea3319d53575d497fdc4836cae5ae4c7fb7f7529e257a5fe860b"
 
       def install
         bin.install "demo-app"
@@ -28,24 +28,24 @@ class DemoApp < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/embano1/ci-demo-app/releases/download/v0.3.4/demo-app_Linux_x86_64.tar.gz"
-      sha256 "676af1f447f80e682c2a1e838a8b586663da5bd2672bcdac08a37adce33d962d"
-
-      def install
-        bin.install "demo-app"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/embano1/ci-demo-app/releases/download/v0.3.4/demo-app_Linux_armv6.tar.gz"
-      sha256 "5c0dc61587b8e35d5bc6c3a86c54d0bd0d941e51307fb968caf47f4506d43ff6"
+      url "https://github.com/embano1/ci-demo-app/releases/download/v0.4.0/demo-app_Linux_x86_64.tar.gz"
+      sha256 "ca35c57fd900962cd9d0af2eea53e803b8d3d2039918382e1022b23e3060d17b"
 
       def install
         bin.install "demo-app"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/embano1/ci-demo-app/releases/download/v0.3.4/demo-app_Linux_arm64.tar.gz"
-      sha256 "f02f8d409fda4cec9bccfc8c16315415e98c8f29a3b58ead71d162efedd8361d"
+      url "https://github.com/embano1/ci-demo-app/releases/download/v0.4.0/demo-app_Linux_arm64.tar.gz"
+      sha256 "c78b7a281f9ed3cba32737c0796fc244e902c8e5928edce178a5564f12f5f297"
+
+      def install
+        bin.install "demo-app"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/embano1/ci-demo-app/releases/download/v0.4.0/demo-app_Linux_armv6.tar.gz"
+      sha256 "9b2292b0793c3aee7341aa404f6d867a6fa81f253add92353e445a88721323b7"
 
       def install
         bin.install "demo-app"
